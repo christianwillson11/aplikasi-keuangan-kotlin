@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/arlon_bold"
+            android:text="Laporan Harian dan Bulanan"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reportDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:text="Jika Anda tidak memilih tanggal, maka laporan yang muncul adalah laporan bulanan. Laporan bulanan akan dikalkulasi / muncul saat setiap akhir bulan. Jika hari ini belum akhir bulan, maka laporan yang muncul adalah laporan bulan kemarin."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Pilih Tanggal"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/reportDesc"
+            app:layout_constraintTop_toBottomOf="@+id/reportDesc" />
+
+        <EditText
+            android:id="@+id/datePicker"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Tanggal"
+            android:drawableRight="@drawable/ic_calendar_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arlon_bold"
+            android:text="Laporan Pemasukan"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/datePicker"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <LinearLayout
+            android:id="@+id/incomeReportLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/datePicker"
+            app:layout_constraintStart_toStartOf="@+id/datePicker"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/arlon_bold"
+            android:text="Laporan Pengeluaran"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="@+id/incomeReportLinearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/incomeReportLinearLayout" />
+
+
+        <LinearLayout
+            android:id="@+id/outcomeReportLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/datePicker"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGrandTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/arlon_bold"
+            android:text="Saldo Akhir: Rp.0"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/outcomeReportLinearLayout"
+            app:layout_constraintTop_toBottomOf="@id/outcomeReportLinearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

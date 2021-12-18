@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/incomeFragment">
+
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.example.uaspaba.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income" />
+    <fragment
+        android:id="@+id/outcomeFragment"
+        android:name="com.example.uaspaba.OutcomeFragment"
+        android:label="fragment_outcome"
+        tools:layout="@layout/fragment_outcome" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.uaspaba.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+</navigation>

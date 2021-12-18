@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/incomeFragment"
+        android:icon="@drawable/icons_income"
+        android:title="Pemasukan"
+        />
+    <item
+        android:id="@+id/outcomeFragment"
+        android:icon="@drawable/icons_outcome"
+        android:title="Pengeluaran"
+        />
+    <item
+        android:id="@+id/reportFragment"
+        android:icon="@drawable/ic_sticky_note_2_24"
+        android:title="Laporan Bulanan"
+        />
+</menu>
